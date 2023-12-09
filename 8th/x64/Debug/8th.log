@@ -1,0 +1,3 @@
+﻿  8th.cpp
+D:\23-2\CPP\8th\8th.cpp(104,10): warning C5046: 'equals': 내부 연결이 포함된 기호 관련 형식이 정의되어 있지 않습니다.
+  8th.vcxproj -> D:\23-2\CPP\8th\x64\Debug\8th.exe
