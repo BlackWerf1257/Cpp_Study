@@ -31,7 +31,7 @@ void GClass<T1, T2>::get(T1& a, T2& b) {
 }
 
 
-///포인터를 이용한 제네릭 클래스
+///포인터를 이용한 제네릭 클래스 - 수정 필요
 template <class T>
 class MyStack3 {
     int tos; //스택의 Top
@@ -62,17 +62,10 @@ T MyStack3<T>::pop() {
     T retData;
     if (tos == -1) {
         cout << "stack empty";
-        return 0; //오류 표시
+        return 0;
     }
     retData = data[tos--];
-    return retData;
 }
-class Point3 {
-    int x, y;
-public:
-    Point3(int x = 0, int y = 0) { this->x = x; this->y = y; }
-    void show() { cout << '(' << x << ',' << y << ')' << endl; }
-};
 
 
 
@@ -159,7 +152,7 @@ template <class T> T MyStack<T>::pop() {
 }
 
 ////////////////////////////////////
-//템플릿의 char형 구체화 문제 - 해결버전(기존 예제는 (int) 제거)
+//템플릿의 char형 구체화 문제
 template <class T>
 void print(T array[], int n) {
     for (int i = 0; i < n; i++)
@@ -178,19 +171,19 @@ void myCopy(T1 src[], T2 dest[], int n) //src[]의 n개 원소를 dest[]에 복�
 int main()
 {
     //iterator 예제
-    //vector<int> vec;
-    //vec.push_back(1);
-    //vec.push_back(2);
-    //vec.push_back(3);
-    //vector<int>::iterator iter; //벡터 v의 원소에 대한 포인터 iter 선언
-    //for (iter = vec.begin(); iter != vec.end(); iter++) { //iterator를 이용해 모든 원소 탐색
-    //    int n = *iter; //iter가 가르키는 원소값 리턴
-    //    n = n * 2;
-    //    *iter = n; //iter가 가르키는 원소에 값 쓰기
-    //}
-    //for (iter = vec.begin(); iter != vec.end(); iter++)
-    //    cout << *iter << ' ';
-    //cout << endl;
+    vector<int> vec;
+    vec.push_back(1);
+    vec.push_back(2);
+    vec.push_back(3);
+    vector<int>::iterator iter; //벡터 v의 원소에 대한 포인터 iter 선언
+    for (iter = vec.begin(); iter != vec.end(); iter++) { //iterator를 이용해 모든 원소 탐색
+        int n = *iter; //iter가 가르키는 원소값 리턴
+        n = n * 2;
+        *iter = n; //iter가 가르키는 원소에 값 쓰기
+    }
+    for (iter = vec.begin(); iter != vec.end(); iter++)
+        cout << *iter << ' ';
+    cout << endl;
 
     //Vector 예제 2
     /*vector<string> sv;
@@ -243,7 +236,7 @@ int main()
 
 
     //포인터를 이용한 제네릭 클래스
-    MyStack3<int*> ipStack;
+    /*MyStack3<int*> ipStack;
     int* p = new int[3];
     for (int i = 0; i < 3; i++)
         p[i] = i * 10; //0,10,20으로 초기화
@@ -271,10 +264,10 @@ int main()
     stringStack.push(s);
     stringStack.push("Java");
     cout << stringStack.pop() << ' ';
-    cout << stringStack.pop() << endl;
+    cout << stringStack.pop() << endl;*/
 
 
-    //제네릭 클래스의 활용 - 예제
+    //제네릭 클래스의 활용
     //MyStack2<int> iStack; //int만 저장하는 스택
     //iStack.push(3);
     //cout << iStack.pop() << endl;
@@ -289,7 +282,7 @@ int main()
     //delete p;
 
 
-    // 템플릿을 이용한 제네릭 클래스 활용
+    // 제네릭 클래스 활용
     /*MyStack<int> iStack;
     MyStack<double> dStack;
 
@@ -300,7 +293,6 @@ int main()
     double d = dStack.pop();*/
 
 
-    //템플릿의 char형 구체화 문제
     //int x[] = { 1,2,3,4,5 };
     //double d[5] = { 1.1, 2.2, 3.3, 4.4, 5.5 };
     //print(x, 5);  // 템플릿 T가 int 타입으로 구체화
