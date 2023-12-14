@@ -1,0 +1,14 @@
+﻿  Cpp_12th.cpp
+D:\23-2\CPP\Ex\Cpp_12th\Cpp_12th.cpp(170,13): error C2668: 'swap': 오버로드된 함수에 대한 호출이 모호합니다.
+D:\23-2\CPP\Ex\Cpp_12th\Cpp_12th.cpp(38,3): message : 'T swap<int>(T,T)'일 수 있습니다.
+          with
+          [
+              T=int
+          ]
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.37.32822\include\utility(97,19): message : 또는       'void std::swap<std::ios_base::iostate,0>(_Ty &,_Ty &) noexcept'
+          with
+          [
+              _Ty=std::ios_base::iostate
+          ]
+D:\23-2\CPP\Ex\Cpp_12th\Cpp_12th.cpp(170,13): message : 인수 목록 '(int, int)'을(를) 일치시키는 동안
+D:\23-2\CPP\Ex\Cpp_12th\Cpp_12th.cpp(170,10): error C2088: '<<': class에 맞지 않습니다.

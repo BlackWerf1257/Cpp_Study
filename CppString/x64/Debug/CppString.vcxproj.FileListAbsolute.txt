@@ -1,2 +1,0 @@
-F:\School\23-2\Cpp\Ex\CppString\x64\Debug\CppString.exe
-C:\Users\bon-515\Desktop\CppString\x64\Debug\CppString.exe

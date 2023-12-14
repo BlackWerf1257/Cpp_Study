@@ -1,2 +1,0 @@
-D:\23-2\CPP\ConsoleApplication1\x64\Debug\ConsoleApplication1.exe
-D:\23-2\CPP\Ex\Cpp_3-2\x64\Debug\ConsoleApplication1.exe
