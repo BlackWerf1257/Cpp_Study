@@ -12,7 +12,7 @@ int square(int x) { return x * x; }
 int main()
 {
     //예외 처리
-    int n, sum, average;
+    /*int n, sum, average;
     while (true)
     {
         cout << "합을 입력하세요 : ";
@@ -33,7 +33,7 @@ int main()
             continue;
         }
         cout << "평균 : " << average << endl << endl; //평균 출력
-    }
+    }*/
 
     //파일의 연결
     /*const char* firstFile = "D:\\23-2\\CPP\\test_write2.txt";
@@ -121,6 +121,23 @@ int main()
 
     cout.setf(ios::showpos); //양수인 경우 + 부호도 함께 출력
     cout << 23.5; */
+
+
+    //ostream
+    //Hello! 출력하고 다음 줄로 이동
+    cout.put('H');
+    cout.put('e');
+    cout.put('l');
+    cout.put('l');
+    cout.put('o');
+    cout.put(33);
+    cout.put('\n');
+
+    //C++ 출력
+    cout.put('C').put('+').put('+').put(' ');
+
+    char str[] = "Hello World";
+    cout.write(str, 5);
 
     //auto 이용한 변수 선언
     /* auto c = 'a'; //char 타입
