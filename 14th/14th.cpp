@@ -9,6 +9,27 @@
 
 int square(int x) { return x * x; }
 
+
+//istream
+void get1() {
+    cout << "Enter키가 입력될때까지 계속 입력 및 출력됨>>";
+    int ch; //EOF 비교를 위해 int
+    while ((ch = cin.get()) != EOF) { //문자 읽기, EOF=-1
+        cout.put(ch); //읽은 문자 출력
+
+        if (ch == '\n') break; //Enter키 입력시 함수 종료
+    }
+}
+    void get2() {
+        cout << "Enter키가 입력될때까지 계속 입력 및 출력됨>>";
+        int ch; //EOF 비교를 위해 int
+        while ((ch = cin.get()) != EOF) { //문자 읽기, EOF=-1
+            cout.put(ch); //읽은 문자 출력
+
+            if (ch == '\n') break; //Enter키 입력시 함수 종료
+    }
+}
+
 int main()
 {
     //예외 처리
@@ -123,21 +144,33 @@ int main()
     cout << 23.5; */
 
 
+    //매개 변수 있는 조작자
+    //cout << setw(10) << setfill('^') << "Test" << endl;
+    //매개변수 없는 조작자
+    //cout << hex << showbase << 30 << endl;
+    //cout << dec << showpos << 100 << endl;
+
+    //istream
+    //get1(); //cin.get() 이용
+    //get2(); //cin.get(char &) 이용
+    
+
+
     //ostream
     //Hello! 출력하고 다음 줄로 이동
-    cout.put('H');
-    cout.put('e');
-    cout.put('l');
-    cout.put('l');
-    cout.put('o');
-    cout.put(33);
-    cout.put('\n');
+    //cout.put('H');
+    //cout.put('e');
+    //cout.put('l');
+    //cout.put('l');
+    //cout.put('o');
+    //cout.put(33);
+    //cout.put('\n');
 
-    //C++ 출력
-    cout.put('C').put('+').put('+').put(' ');
+    ////C++ 출력
+    //cout.put('C').put('+').put('+').put(' ');
 
-    char str[] = "Hello World";
-    cout.write(str, 5);
+    //char str[] = "Hello World";
+    //cout.write(str, 5);
 
     //auto 이용한 변수 선언
     /* auto c = 'a'; //char 타입
